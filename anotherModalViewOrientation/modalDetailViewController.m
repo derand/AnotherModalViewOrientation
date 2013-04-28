@@ -27,6 +27,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+	
+	self.view.backgroundColor = [UIColor grayColor];
+	
+	self.navigationItem.title = NSLocalizedString(@"Details", nil);
 }
 
 - (void)didReceiveMemoryWarning
@@ -34,5 +38,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 @end

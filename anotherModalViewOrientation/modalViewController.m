@@ -7,6 +7,8 @@
 //
 
 #import "modalViewController.h"
+#import "modalDetailViewController.h"
+
 
 @interface modalViewController ()
 
@@ -44,6 +46,13 @@
 																  target:self action:@selector(backBarButtonItemAction:)];
 	self.navigationItem.leftBarButtonItem = doneButton;
 	[doneButton release];
+	
+	UIBarButtonItem *detailButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Details", nil)
+																	 style:UIBarButtonItemStyleDone
+																	target:self action:@selector(detailsBarButtonItemAction:)];
+	self.navigationItem.rightBarButtonItem = detailButton;
+	[detailButton release];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -100,6 +109,12 @@
 	}
 }
 
+- (void)detailsBarButtonItemAction:(id)sender
+{
+	modalDetailViewController *vc = [[modalDetailViewController alloc] init];
+	[self.navigationController pushViewController:vc animated:YES];
+	[vc release];
+}
 
 
 @end

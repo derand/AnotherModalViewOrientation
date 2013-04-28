@@ -15,7 +15,7 @@
 @end
 
 
-@interface modalViewController : UIViewController
+@interface modalViewController : UIViewController <UIGestureRecognizerDelegate>
 {
 	id<modalViewControllerDelegate> delagate;
 }
